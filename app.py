@@ -32,11 +32,12 @@ model_choice = st.sidebar.selectbox(
 
 # Load selected model
 model_map = {
-    "Random Forest": "random_forest_model.pkl",
-    "Decision Tree": "decision_tree_model.pkl",
-    "Logistic Regression": "logistic_regression_model.pkl",
-    "KNN": "knn_model.pkl"
+    "Random Forest": "models/random_forest_model.pkl",
+    "Decision Tree": "models/decision_tree_model.pkl",
+    "Logistic Regression": "models/logistic_regression_model.pkl",
+    "KNN": "models/knn_model.pkl"
 }
+
 
 model = joblib.load(model_map[model_choice])
 y_pred = model.predict(X)
